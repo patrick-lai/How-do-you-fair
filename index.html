@@ -7,7 +7,7 @@ body_class: home-intro
 
   <div class="intro-in">
 
-    <h1 style="font-size: 30pt;">
+    <h1 class="main_heading">
       Australian Individual Income
     </h1>
 
@@ -18,7 +18,7 @@ body_class: home-intro
     <h2 class="intro-subtitle">How do you think you fair against others?</h2>
 
     <section class="slider_section">
-      <h1>
+      <h1 class="slider_ends">
         Least Well
       </h1>
       <div class="range" data-value="50">
@@ -31,17 +31,17 @@ body_class: home-intro
       		<div class="bar"></div>
       	</div>
       </div>
-      <h1>
+      <h1 class="slider_ends">
         Most Well
       </h1>
     </section>
 
-    <div style="height: 200px;">
+    <div style="height: 400px;">
       <button id="reveal">Reveal how you really fair</button>
 
       <h2 id="entry_message" class="intro-subtitle" >This is how you think you are doing as an individual</h2>
 
-      <div id="bottles" style="position: relative; margin: 5em;">
+      <div id="bottles" style="position: relative; margin: 3em 0;">
         {% include result.html %}
       </div>
     </div>

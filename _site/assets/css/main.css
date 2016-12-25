@@ -14,7 +14,7 @@
   display: inline-block;
   position: relative;
   width: 100px;
-  margin: 0 20px 50px 0;
+  margin: 10px 20px;
 }
 
 .bottle:after {
@@ -2202,13 +2202,15 @@ body.home-intro .intro {
 
 #reveal {
   background-color: #ae81ff;
-  font-size: 20pt;
   padding: 10px 40px;
 }
 #reveal:hover {
   background-color: #9e68ff;
 }
 
+#footer {
+  font-size: 0.6rem;
+}
 #footer a {
   color: #222;
   text-decoration: none;
@@ -2218,7 +2220,6 @@ body.home-intro .intro {
 }
 #footer .authors {
   margin-left: 1em;
-  font-size: 16pt;
 }
 #footer .authors a {
   color: #f7ff00;
@@ -2241,6 +2242,10 @@ body.home-intro .intro {
   display: none;
 }
 
+#entry_message {
+  height: 2em;
+}
+
 #your_bottle_label, #actual_bottle_label {
   transition: all 1s ease;
   opacity: 0;
@@ -2252,6 +2257,32 @@ body.home-intro .intro {
   justify-content: center;
 }
 
+@media (min-width: 768px) {
+  #reveal {
+    font-size: 1.5rem;
+  }
+
+  .main_heading {
+    font-size: 3rem;
+  }
+
+  .slider_ends {
+    font-size: 2rem;
+  }
+}
+@media (max-width: 768px) {
+  #reveal {
+    font-size: 1rem;
+  }
+
+  .main_heading {
+    font-size: 2rem;
+  }
+
+  .slider_ends {
+    font-size: 1rem;
+  }
+}
 .menu-burger {
   position: fixed;
   z-index: 30;

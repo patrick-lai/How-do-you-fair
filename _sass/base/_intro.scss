@@ -70,7 +70,6 @@ body.home-intro {
 
 #reveal{
  background-color: #ae81ff;
- font-size: 20pt;
  padding: 10px 40px;
  &:hover{
    background-color: darken(#ae81ff, 5%);
@@ -78,6 +77,8 @@ body.home-intro {
 }
 
 #footer{
+  font-size: 0.6rem;
+  
   a{
     color: #222;
     text-decoration: none;
@@ -88,7 +89,6 @@ body.home-intro {
 
   .authors{
     margin-left: 1em;
-    font-size: 16pt;
     a{
       color: #f7ff00;
       text-decoration: none;
@@ -114,6 +114,10 @@ body.home-intro {
   display: none;
 }
 
+#entry_message{
+  height: 2em;
+}
+
 #your_bottle_label, #actual_bottle_label{
   transition: all 1s ease;
   opacity: 0;
@@ -123,4 +127,36 @@ body.home-intro {
   display: flex;
   align-items: baseline;
   justify-content: center;
+}
+
+
+// Media Queries
+
+$breakpoint-tablet: 768px;
+@media (min-width: $breakpoint-tablet) {
+
+  #reveal{
+    font-size: 1.5rem;
+  }
+
+  .main_heading{
+    font-size: 3rem;
+  }
+
+  .slider_ends{
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: $breakpoint-tablet) {
+  #reveal{
+    font-size: 1rem;
+  }
+
+  .main_heading{
+    font-size: 2rem;
+  }
+  .slider_ends{
+    font-size: 1rem;
+  }
 }

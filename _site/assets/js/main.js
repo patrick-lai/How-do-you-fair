@@ -44,6 +44,8 @@ jQuery(document).ready(function($){
 
     var actual_percentile = getPercentile(user_income);
 
+    $("html, body").animate({ scrollTop: $(document).height()-$(window).height() });
+
     // animate the result
     $({})
     // Hide the button
