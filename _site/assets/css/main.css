@@ -2208,9 +2208,6 @@ body.home-intro .intro {
   background-color: #9e68ff;
 }
 
-#footer {
-  font-size: 0.6rem;
-}
 #footer a {
   color: #222;
   text-decoration: none;
@@ -2271,6 +2268,10 @@ body.home-intro .intro {
   }
 }
 @media (max-width: 768px) {
+  #footer {
+    font-size: 0.7rem;
+  }
+
   #reveal {
     font-size: 1rem;
   }
