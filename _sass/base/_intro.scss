@@ -78,6 +78,14 @@ body.home-intro {
 
 #footer{
   z-index: 10;
+  background-color: gray;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  color: white;
+  box-sizing: border-box;
+  padding: 10px;
+
   a{
     color: #222;
     text-decoration: none;
@@ -87,7 +95,7 @@ body.home-intro {
   }
 
   .authors{
-    margin-left: 1em;
+    float: right;
     a{
       color: #f7ff00;
       text-decoration: none;
@@ -145,6 +153,10 @@ $breakpoint-tablet: 768px;
 }
 
 @media (max-width: $breakpoint-tablet) {
+
+  .intro-in{
+    padding: 1.5em 0;
+  }
 
   #footer{
     font-size: 0.7rem;

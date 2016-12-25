@@ -2210,6 +2210,13 @@ body.home-intro .intro {
 
 #footer {
   z-index: 10;
+  background-color: gray;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  color: white;
+  box-sizing: border-box;
+  padding: 10px;
 }
 #footer a {
   color: #222;
@@ -2219,7 +2226,7 @@ body.home-intro .intro {
   color: #090909;
 }
 #footer .authors {
-  margin-left: 1em;
+  float: right;
 }
 #footer .authors a {
   color: #f7ff00;
@@ -2268,6 +2275,10 @@ body.home-intro .intro {
   }
 }
 @media (max-width: 768px) {
+  .intro-in {
+    padding: 1.5em 0;
+  }
+
   #footer {
     font-size: 0.7rem;
   }
