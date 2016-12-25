@@ -1,0 +1,37 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
+
+source: source
+destination: _site
+sass:
+  sass_dir: _sass
+  style: expanded # compressed # expanded
+
+# permalink and highlighter
+permalink   : /:year/:title/
+markdown    : kramdown
+highlighter : pygments
+
+# SEO settings
+title: "How do you fair"
+description: "Find out how your individual income compares to others in australia"
+keywords: "Australian Income Statistics"
+
+# Site settings
+url: http://howdoyoufair.com.au
+baseurl: ""
+# baseurl: ""
+
+# Author settings
+author:
+  name      : Patrick Lai (using Fernando Moreira's template)
+  job       : Full Stack Engineer
+  email     : nandomoreira.me@gmail.com
+  linkedin  : https://www.linkedin.com/in/patrick-lai-868887b4
+
+# google_analytics: UA-52446115-1
+repo: https://github.com/patrick-lai/How-do-you-fair

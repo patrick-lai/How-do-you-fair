@@ -1,0 +1,126 @@
+body.home-intro {
+  width: 100%;
+  display: table;
+
+  .intro {
+    display: table-cell;
+  }
+}
+
+.intro {
+  text-align: center;
+  vertical-align: middle;
+  position: relative;
+  padding: 0 $base-spacing;
+  text-align: center;
+  color: $lighter-gray-color;
+  overflow: hidden;
+}
+
+.intro-in {
+  z-index: 2;
+  position: relative;
+  text-align: center;
+  display: inline-block;
+  max-width: $desktop-width;
+  margin: auto;
+  width: 100%;
+  padding: 4em 2em;
+
+  @include media($min-tablet) {
+    padding: 6em 0;
+  }
+
+  @include media($min-tablet-large) {
+    padding: 9em 0;
+  }
+}
+
+.intro-title,
+.post-header .post-title {
+  font-size: 2.6rem;
+  margin: 0 0 20px;
+  color: $white-color;
+  font-weight: $font-weight-light;
+
+  @include media($min-tablet) {
+    font-size: 3rem;
+  }
+
+  @include media($min-tablet-large) {
+    font-size: 3.6rem;
+  }
+
+  @include media($min-desktop-large) {
+    font-size: 4rem;
+  }
+}
+
+.intro-subtitle {
+  margin-bottom: $small-spacing;
+  font-size: 1.2em;
+  font-family: $serif-font-family;
+  font-weight: $font-weight-normal;
+  font-style: italic;
+
+  @include media($min-tablet-large) {
+    font-size: 1.6rem;
+  }
+}
+
+#reveal{
+ background-color: #ae81ff;
+ font-size: 20pt;
+ padding: 10px 40px;
+ &:hover{
+   background-color: darken(#ae81ff, 5%);
+ }
+}
+
+#footer{
+  a{
+    color: #222;
+    text-decoration: none;
+    &:hover {
+      color: darken(#222, 10%);
+    }
+  }
+
+  .authors{
+    margin-left: 1em;
+    font-size: 16pt;
+    a{
+      color: #f7ff00;
+      text-decoration: none;
+      &:hover {
+        color: #001548;
+      }
+    }
+  }
+}
+
+#bottles{
+  &>div{
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    .intro-subtitle{
+      width: 60px;
+    }
+  }
+}
+
+#bottles, #entry_message {
+  display: none;
+}
+
+#your_bottle_label, #actual_bottle_label{
+  transition: all 1s ease;
+  opacity: 0;
+}
+
+.slider_section{
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+}
