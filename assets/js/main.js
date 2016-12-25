@@ -96,7 +96,7 @@ jQuery(document).ready(function($){
         }else if(actual_percentile + 5 > user_guess){
           $(this).text("Congratulations! You are doing better than you thought");
         }else{
-          $(this).text("You are not doing as well as you think. :(");
+          $(this).text("You are not doing as well as you think");
         }
       }).fadeIn(next);
     })
