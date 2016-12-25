@@ -2208,6 +2208,9 @@ body.home-intro .intro {
   background-color: #9e68ff;
 }
 
+#footer {
+  z-index: 10;
+}
 #footer a {
   color: #222;
   text-decoration: none;
@@ -2230,9 +2233,6 @@ body.home-intro .intro {
   display: flex;
   align-items: baseline;
   justify-content: center;
-}
-#bottles > div .intro-subtitle {
-  width: 60px;
 }
 
 #bottles, #entry_message {
