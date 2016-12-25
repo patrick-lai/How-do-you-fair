@@ -1,17 +1,14 @@
-# .X [![Build Status](https://travis-ci.org/nandomoreirame/dotX.svg?branch=master)](https://travis-ci.org/nandomoreirame/dotX)
 
-> Simple & Beautiful Jekyll theme
+> http://www.howdoyoufair.com.au
 
-### [Demo](https://nandomoreira.me/dotX/)
-
-![dotX - free Jekyll theme](/screenshot.png)
+![Screenshot](/screenshot.png)
 
 ---
 
 ### Start in 4 steps
 
-1. Download or clone repo `git clone git@github.com:nandomoreirame/dotX.git`
-2. Enter the folder: `cd dotX/`
+1. Download or clone repo
+2. Enter the folder: `cd how-do-you-fair/`
 3. Install Ruby gems: `bundle install`
 4. Start Jekyll server: `jekyll serve`
 
@@ -37,4 +34,4 @@ It is under [the MIT license](/LICENSE).
 
 Enjoy :yum:
 
-by [nandomoreira.me](https://nandomoreira.me)
+by Patrick Lai using [nandomoreira.me](https://nandomoreira.me)'s theme
