@@ -34,7 +34,12 @@ jQuery(document).ready(function($){
 
   $('#user_income').bind('input, change', function(){
     user_income = $(this).val();
-  })
+  });
+
+  $('#check_again').on('click', function(){
+    // Lazy Reset page
+    location.reload();
+  });
 
   $('#reveal').on('click', function(){
 
