@@ -33,14 +33,18 @@ jQuery(document).ready(function($){
   }
 
   $('#user_income').bind('input, change', function(){
-    user_income = parseFloat($(this).val().replace(/,/g, ''));
-    if(isNaN(user_income) || user_income < 0){
-     $('#user_income').val('0');
-     user_income = 0;
-    }
+    user_income = $(this).val();
   })
 
   $('#reveal').on('click', function(){
+
+    user_income = parseFloat(user_income.replace(/,/g, ''));
+    if(isNaN(user_income)){
+      $("#nan").css('opacity', '1');
+      return;
+    }
+
+    $("#nan").css('opacity', '0');
 
     var actual_percentile = getPercentile(user_income);
 
@@ -105,47 +109,119 @@ jQuery(document).ready(function($){
 
 });
 
-var DIST_CHART = {
-  0 : 0,
-  5 :27976,
-  10 :31267,
-  15 :34510,
-  20 :39030,
-  25 :43592,
-  30 :47151,
-  35 :50856,
-  40 :54041,
-  45 :58776,
-  50 :62596,
-  55 :67389,
-  60 :76822,
-  65 :87674,
-  70 :101540,
-  75 :120624,
-  80 :577674,
-  90 :3476038,
-  100 :4303649
-}
+// Just hardcode CBF
+
+var DIST_CHART = [
+  0,
+  20862,
+  21577,
+  22312,
+  23054,
+  23789,
+  24536,
+  25281,
+  26022,
+  26773,
+  27526,
+  28285,
+  29034,
+  29764,
+  30480,
+  31191,
+  31901,
+  32579,
+  33230,
+  33877,
+  34513,
+  35132,
+  35750,
+  36349,
+  36907,
+  37423,
+  38015,
+  38623,
+  39235,
+  39846,
+  40451,
+  41072,
+  41697,
+  42330,
+  42967,
+  43611,
+  44262,
+  44918,
+  45581,
+  46252,
+  46941,
+  47637,
+  48348,
+  49065,
+  49777,
+  50489,
+  51206,
+  51959,
+  52745,
+  53547,
+  54369,
+  55196,
+  56053,
+  56926,
+  57813,
+  58717,
+  59635,
+  60554,
+  61510,
+  62491,
+  63490,
+  64513,
+  65551,
+  66620,
+  67731,
+  68855,
+  70003,
+  71183,
+  72412,
+  73678,
+  74958,
+  76264,
+  77603,
+  78945,
+  80044,
+  81433,
+  82985,
+  84618,
+  86324,
+  88090,
+  90024,
+  92110,
+  94394,
+  96854,
+  99526,
+  102415,
+  105613,
+  109169,
+  113161,
+  117646,
+  122724,
+  128502,
+  135095,
+  142929,
+  152407,
+  164436,
+  178837,
+  197801,
+  235435,
+  324584
+]
 
 function getPercentile(income){
 
-  // The spacing of the data
-  var gap_between_brackets = 5;
-
-  // Loop through income and return an interpolated percentile
+  // Loop through income and return percentile
+  // The index IS the percentile
   for(var percentile in DIST_CHART){
-    if(DIST_CHART[percentile] > income){
-      // Do a linear interpolation
-      var previous_percentile = percentile-gap_between_brackets;
-
-      var previous_braket = DIST_CHART[previous_percentile];
-      var current_braket = DIST_CHART[percentile];
-
-      // Estimated percentile is the previous percentile plus a perceentage of the persons income compared to the gap.
-      var estimate_percentile = previous_percentile + ((income-previous_braket)/(current_braket-previous_braket) * gap_between_brackets);
-
-      return Math.floor(estimate_percentile);
-
+    if(income < DIST_CHART[percentile]){
+      console.log(percentile);
+      return percentile;
     }
   }
 

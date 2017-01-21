@@ -68,12 +68,18 @@ body.home-intro {
   }
 }
 
-#reveal{
+button.btn_purple{
  background-color: #ae81ff;
  padding: 10px 40px;
  &:hover{
    background-color: darken(#ae81ff, 5%);
  }
+}
+
+#nan{
+  opacity: 0;
+  font-size: 14pt;
+  font-weight: 800;
 }
 
 #footer{

@@ -11,6 +11,7 @@
 2. Enter the folder: `cd how-do-you-fair/`
 3. Install Ruby gems: `bundle install`
 4. Start Jekyll server: `jekyll serve`
+5. If out of version: `bundle exec jekyll serve`
 
 Access, [localhost:4000](http://localhost:4000)
 

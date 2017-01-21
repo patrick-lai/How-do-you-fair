@@ -27,7 +27,7 @@ body_class: home-intro
       		<div class="drop"></div>
       	</div>
       	<div class="input-box">
-      		<input id="input-range" type="range" min="0" max="100" value="50"/>
+      		<input id="input-range" required pattern="^\d{1,12}$" type="range" min="0" max="100" value="50"/>
       		<div class="bar"></div>
       	</div>
       </div>
@@ -37,12 +37,14 @@ body_class: home-intro
     </section>
 
     <div style="height: 400px;">
-      <button id="reveal">Reveal how you really fair</button>
+      <button id="reveal" class="btn_purple">Reveal how you really fair</button>
+      <div id="nan">Please put in only numbers for your income</div>
 
       <h2 id="entry_message" class="intro-subtitle" >This is how you think you are doing as an individual</h2>
 
       <div id="bottles" style="position: relative; margin: 3em 0;">
         {% include result.html %}
+        <button id="check_again" class="btn_purple">Check again</button>
       </div>
     </div>
 
